@@ -2,6 +2,11 @@
     .consultation
         min-height: 600px
         padding: 70px 0
+    .carousel
+        .prev
+            left: 0
+        .next
+            right: 0
 
 @media (max-width: 991px)
     .header
@@ -20,6 +25,16 @@
             text-align: center
         .feed-form
             margin: 36px auto 0
+    .carousel
+        .prev
+            display: none
+        .next
+            display: none
+        &__wrapper
+            .tns-item
+                width: 100%
+                img
+                    width: 100%
 
 @media (max-width: 767px)
     .md-visible
