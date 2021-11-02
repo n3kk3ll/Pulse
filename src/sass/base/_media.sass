@@ -26,6 +26,7 @@
         .feed-form
             margin: 36px auto 0
     .carousel
+        padding: 50px 0
         .prev
             display: none
         .next
@@ -35,6 +36,9 @@
                 width: 100%
                 img
                     width: 100%
+    .catalog
+        &__content
+            padding: 0 50px
 
 @media (max-width: 767px)
     .md-visible
@@ -77,7 +81,26 @@
             font-size: 16px
         .feed-form
             margin-top: 25px
-    
+    .carousel
+        padding: 50px 0 25px
+    .catalog
+        padding-bottom: 50px
+        .title
+            font-size: 25px
+        &__tabs
+            margin-top: 25px
+        &__tab
+            width: 160px
+            font-size: 15px
+            &:hover
+                box-shadow: none
+        &__content
+            justify-content: center
+            padding: 0
+            margin-top: 20px
+        &-item
+            margin: 20px 20px 0
+
 @media (max-width: 575px)
     .header
         &__logo
@@ -117,6 +140,33 @@
                 width: 100%
                 height: 55px
                 font-size: 16px
+    .catalog
+        .title
+            font-size: 22px
+        &__tabs
+            flex-direction: column
+        &__tab
+            width: 90%
+            height: 40px
+            line-height: 40px
+            &:not(:first-child)
+                margin-top: 30px
+        &-item
+            &__old-price
+                font-size: 12px
+            &__price
+                font-size: 15px
+            &__content
+                margin-right: 0
+                margin-left: -12px
+                &__descr
+                    font-size: 13px
+            &__back
+                bottom: -15px
+        .button
+            &_mini
+                width: 135px
+                height: 44px
 
 @media (max-width: 319px)
     .header
@@ -134,3 +184,7 @@
             font-size: 12px
         .feed-form
             width: 100%
+    .catalog
+        &-item
+            &__content
+                // transform: translateX(-150%)

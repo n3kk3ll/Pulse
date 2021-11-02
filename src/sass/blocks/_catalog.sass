@@ -1,0 +1,142 @@
+.catalog
+    padding-bottom: 79px
+    &__tabs
+        margin-top: 46px
+        list-style-type: none
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 0
+        padding-left: 0
+    &__tab
+        width: 222px
+        height: 52px
+        margin: 0 5px
+        border: 2px solid #D0D0D0
+        font-weight: 400
+        font-size: 18px
+        line-height: 52px
+        text-align: center
+        text-transform: uppercase
+        color: #6B6B6B
+        transform: skewX(-25deg)
+        cursor: pointer
+        transition: 0.5s all
+        &:hover
+            box-shadow: 1px 1px 20px $main-color
+            border: none
+        div
+            transform: skewX(25deg)
+        &_active
+            background-color: $main-color
+            color: #fff
+            border: none
+    &__content
+        margin-top: 37px
+        flex-wrap: wrap
+        justify-content: space-between
+        display: none
+        &_active
+            display: flex
+    &-item
+        width: 303px
+        min-height: 242px
+        border: 2px solid #E8E8E8
+        padding: 20px
+        overflow: hidden
+        margin-top: 20px
+        &__wrapper
+            display: flex
+            width: calc(200% + 40px)
+        &__content
+            width: 50%
+            margin-right: 0px
+            transform: translateX(-100%)
+            transition: .5s all
+            &_active
+                transform: translateX(0%)
+                margin-right: 20px
+        &__list
+            position: relative
+            width: 50%
+            margin-left: 20px
+            transform: translateX(0%)
+            transition: .5s all
+            padding-left: 17px
+            padding-right: 15px
+            margin-bottom: 0
+            list-style-type: none
+            li
+                position: relative
+                font-weight: 300
+                font-size: 14px
+                color: #555555
+                margin-bottom: 10px
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 5px
+                    left: -17px
+                    height: 8px
+                    width: 8px
+                    background-color: $main-color
+            &_active
+                transform: translateX(-100%)
+                margin-left: 0
+        &__back
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(calc(-50% - 17px))
+            display: block
+            color: $main-color
+            font-weight: 500
+            font-size: 14px
+            text-transform: uppercase
+            text-decoration-line: underline
+            &:hover
+                color: $main-color
+        &__img
+            max-width: 100%
+            height: 140px
+            display: block
+            margin: 0 auto
+        &__subtitle
+            margin-top: 15px
+            font-weight: 700
+            font-size: 16px
+            text-align: center
+            color: #0D0D0D
+        &__descr
+            margin-top: 15px
+            font-weight: 300
+            font-size: 14px
+            text-align: center
+            color: #0D0D0D
+        &__link
+            display: block
+            text-align: center
+            margin-top: 10px
+            color: $main-color
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 14px
+            text-decoration-line: underline
+            &:hover
+                color: $main-color
+        hr
+            margin: 17px auto
+            background-color: #e8e8e8
+        &__footer
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__old-price
+            font-weight: 300
+            font-size: 14px
+            text-decoration-line: line-through
+            color: #555555
+        &__price
+            font-weight: 700
+            font-size: 20px
+            color: #050505
