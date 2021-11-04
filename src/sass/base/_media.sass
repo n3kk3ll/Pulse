@@ -230,6 +230,12 @@
             &:not(:first-child)
                 margin-top: 30px
         &-item
+            &__list
+                &_active
+                    transform: translateX(-99%)
+                ul
+                    li
+                        font-size: 12px
             &__old-price
                 font-size: 12px
             &__price
@@ -240,7 +246,8 @@
                 &__descr
                     font-size: 13px
             &__back
-                bottom: -15px
+                bottom: 0
+                transform: translateX(calc(-50% - 5px))
         .button
             &_mini
                 width: 135px
